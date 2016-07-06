@@ -26,6 +26,9 @@ public class QCMaterialELISA implements IQCMaterial, Serializable {
 	@Column(name="analyte")
 	private String analyte;
 	
+    @Column(name="parameter_id")
+    private Long parameterId;
+	
 	@Column(name="qclot")
 	private long qclot;
 
@@ -118,5 +121,13 @@ public class QCMaterialELISA implements IQCMaterial, Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public Long getParameterId() {
+		return parameterId;
+	}
+
+	public void setParameterId(Long parameterId) {
+		this.parameterId = parameterId;
 	}
 }

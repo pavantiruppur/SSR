@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.ssr.bo.ControlDetialBO;
+import org.ssr.bo.ParameterDetailsBO;
 import org.ssr.components.ReaderComponents;
 import org.ssr.dao.CommonQueries;
+import org.ssr.dao.parameterdetails.IParameterDetails;
 import org.ssr.dao.qcmaterial.IQCMaterial;
 import org.ssr.dao.qcmaterial.QCMaterialCLIA;
 import org.ssr.dao.qcmaterial.QCMaterialELISA;
@@ -28,7 +30,8 @@ public class ControlDetailHelper {
 		
 		controlDetailBO.setAnalyte(controlDetail.getAnalyte());
 		controlDetailBO.setBarcode(controlDetail.getBarcode());
-		controlDetailBO.setQcId(controlDetail.getQcId().intValue());
+		controlDetailBO.setParameterId(controlDetail.getParameterId());
+		controlDetailBO.setQcId(controlDetail.getQcId());
 		controlDetailBO.setQcLot((int)controlDetail.getQclot());
 		controlDetailBO.setReference(controlDetail.getReference());
 		controlDetailBO.setRefPlusOrMinus(controlDetail.getRefPlusOrMinus());
@@ -49,6 +52,7 @@ public class ControlDetailHelper {
 		
 		controlDetail.setAnalyte(controlDetailBO.getAnalyte());
 		controlDetail.setBarcode(controlDetailBO.getBarcode());
+		controlDetail.setParameterId(controlDetailBO.getParameterId());
 		controlDetail.setQcId(Long.valueOf(controlDetailBO.getQcId()));
 		controlDetail.setQclot(controlDetailBO.getQcLot());
 		controlDetail.setReference(controlDetailBO.getReference());
@@ -57,25 +61,25 @@ public class ControlDetailHelper {
 		return controlDetail;
 	}
 	
-	public static ControlDetialBO getStripDetail(Long stripId){
-		IQCMaterial controlDetail = commonQueries.getDetailForId(ReaderComponents.getTableNameForMode(IQCMaterial.class), stripId);
+	public static ControlDetialBO getControlDetial(Long controlId){
+		IQCMaterial controlDetail = commonQueries.getDetailForId(ReaderComponents.getTableNameForMode(IQCMaterial.class), controlId);
 		ControlDetialBO controlDetailBO = convertFromDAOtoBO(controlDetail);
 		return controlDetailBO;
 	}
 	
-	public static List<ControlDetialBO> getAllStripDetails(){
+	public static List<ControlDetialBO> getAllControlDetials(){
 		List<IQCMaterial> controlDetail = commonQueries.getAllDetails("from "+ ReaderComponents.getTableNameForMode(IQCMaterial.class).getSimpleName());
-		List<ControlDetialBO> controlDetailBO = getStripDetails(controlDetail);
+		List<ControlDetialBO> controlDetailBO = getControlDetials(controlDetail);
 		return controlDetailBO;
 	}
 	
-	public static List<ControlDetialBO> getAllStripDetailsForWhere(String whereCond){
+	public static List<ControlDetialBO> getAllControlDetialsForWhere(String whereCond){
 		List<IQCMaterial> controlDetail = commonQueries.getAllDetails("from "+ ReaderComponents.getTableNameForMode(IQCMaterial.class).getSimpleName()+ " " + whereCond);
-		List<ControlDetialBO> controlDetailBO = getStripDetails(controlDetail);
+		List<ControlDetialBO> controlDetailBO = getControlDetials(controlDetail);
 		return controlDetailBO;
 	}
 	
-	public static List<ControlDetialBO> getStripDetails(List<IQCMaterial> controlDetails){
+	public static List<ControlDetialBO> getControlDetials(List<IQCMaterial> controlDetails){
 		List<ControlDetialBO> controlDetailsBOList = new ArrayList<ControlDetialBO>();
 		for(IQCMaterial control : controlDetails){
 			controlDetailsBOList.add(convertFromDAOtoBO(control));
@@ -103,5 +107,18 @@ public class ControlDetailHelper {
 		Long count = commonQueries.getCountValue("select count(*) from "+ ReaderComponents.getTableNameForMode(IQCMaterial.class).getSimpleName());
 		return count == null ? 0 : count.intValue();
 	}
-	
+
+	public static String[][] getControlDataStrAry(List<ControlDetialBO> qcBOList){
+		String data[][] = new String[qcBOList.size()][6];
+		for(int i=0;i<qcBOList.size();i++){
+			ControlDetialBO qcBO = qcBOList.get(i);
+			data[i][0] = String.valueOf(qcBO.getQcId());
+			data[i][1] = qcBO.getBarcode();
+			data[i][2] = qcBO.getAnalyte();
+			data[i][3] = String.valueOf(qcBO.getQcLot());
+			data[i][4] = String.valueOf(qcBO.getReference());
+			data[i][5] = String.valueOf(qcBO.getRefPlusOrMinus());
+		}
+		return data;
+	}
 }

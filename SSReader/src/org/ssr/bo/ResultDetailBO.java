@@ -1,6 +1,7 @@
 package org.ssr.bo;
 
 import java.text.DecimalFormat;
+import java.util.Date;
 
 import org.ssr.components.ReaderComponents;
 import org.ssr.enums.TestTypeEnum;
@@ -14,6 +15,8 @@ public class ResultDetailBO extends ParameterDetailsBO {
 	double rlu;
 	double conc;
 	TestTypeEnum sampleType;
+	Date creationDate;
+	Date lastModifiedDate;
 	
 	public long getResultId() {
 		return resultId;
@@ -50,5 +53,17 @@ public class ResultDetailBO extends ParameterDetailsBO {
 	}
 	public void setSampleType(TestTypeEnum sampleType) {
 		this.sampleType = sampleType;
+	}
+	public Date getCreationDate() {
+		return creationDate;
+	}
+	public void setCreationDate(Date creationDate) {
+		this.creationDate = creationDate;
+	}
+	public Date getLastModifiedDate() {
+		return lastModifiedDate;
+	}
+	public void setLastModifiedDate(Date lastModifiedDate) {
+		this.lastModifiedDate = lastModifiedDate;
 	}
 }

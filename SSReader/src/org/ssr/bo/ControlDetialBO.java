@@ -2,7 +2,8 @@ package org.ssr.bo;
 
 public class ControlDetialBO {
 	String barcode, analyte;
-	int qcId,qcLot;
+	Long qcId, parameterId;
+	int qcLot;
 	double reference, refPlusOrMinus;
 	
 	public String getBarcode() {
@@ -17,10 +18,10 @@ public class ControlDetialBO {
 	public void setAnalyte(String analyte) {
 		this.analyte = analyte;
 	}
-	public int getQcId() {
+	public Long getQcId() {
 		return qcId;
 	}
-	public void setQcId(int qcId) {
+	public void setQcId(Long qcId) {
 		this.qcId = qcId;
 	}
 	public int getQcLot() {
@@ -40,5 +41,11 @@ public class ControlDetialBO {
 	}
 	public void setRefPlusOrMinus(double refPlusOrMinus) {
 		this.refPlusOrMinus = refPlusOrMinus;
+	}
+	public Long getParameterId() {
+		return parameterId;
+	}
+	public void setParameterId(Long parameterId) {
+		this.parameterId = parameterId;
 	}
 }

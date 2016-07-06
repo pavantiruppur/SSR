@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "qcmaterial_ELISA")
+@Table(name = "qcmaterial_CLIA")
 public class QCMaterialCLIA implements IQCMaterial, Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -25,7 +25,10 @@ public class QCMaterialCLIA implements IQCMaterial, Serializable {
 
 	@Column(name="analyte")
 	private String analyte;
-	
+
+    @Column(name="parameter_id")
+    private Long parameterId;
+    
 	@Column(name="qclot")
 	private long qclot;
 
@@ -118,5 +121,13 @@ public class QCMaterialCLIA implements IQCMaterial, Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public Long getParameterId() {
+		return parameterId;
+	}
+
+	public void setParameterId(Long parameterId) {
+		this.parameterId = parameterId;
 	}
 }

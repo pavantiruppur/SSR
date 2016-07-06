@@ -34,6 +34,8 @@ public class ResultDetailHelper {
 		resultDetailBO.setResultId(resultDetail.getResultId());
 		resultDetailBO.setRlu(resultDetail.getRluValue());
 		resultDetailBO.setSampleType(TestTypeEnum.getEnumByKey(resultDetail.getSample_type()));
+		resultDetailBO.setCreationDate(resultDetail.getCreationDate());
+		resultDetailBO.setLastModifiedDate(resultDetail.getLastModifiedDate());
 		
 		return resultDetailBO;
 	}

@@ -69,7 +69,7 @@ public class CommunicationModule {
 				&& stripDetail.getCalibrationType() == CalibrationTypeEnum.TWO_POINT){
 			System.exit(0);
 		} else if(stripDetail.getTestType() == TestTypeEnum.CONTROL){
-			
+			insertResultData(rlu, stripDetail);
 		}
 		JPanel vesselPanel = TrayWindowView.getInstance().vesselPanel.get((int)stripNo-1);
 		if(vesselPanel != null){

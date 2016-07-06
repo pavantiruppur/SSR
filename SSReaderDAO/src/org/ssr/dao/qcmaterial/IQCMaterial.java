@@ -9,6 +9,9 @@ public interface IQCMaterial {
 
 	public String getBarcode();
 	public void setBarcode(String barcode);
+	
+	public Long getParameterId();
+	public void setParameterId(Long parameterId);
 
 	public String getAnalyte();
 	public void setAnalyte(String analyte);

@@ -576,7 +576,7 @@ public class TrayWindowView {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				ParameterModalView.getInstance().showParameterModal(false, controlIdTxt, stripParameterDetailBO);
+				ControlModalView.getInstance().showControlModal(false, controlIdTxt, stripParameterDetailBO);
 			}
 		});
 		ReaderComponents.getLabel("",selectedStripDetail,LABEL_WIDTH + 100, 5);
@@ -587,7 +587,18 @@ public class TrayWindowView {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
-				//TODO: control work to be done here
+				if(calibrationStrips > 0 && currentStrip < calibrationStrips){
+					StripDetailHelper.deleteAllCalibrationRecords();
+					calibrationStrips = 0;
+				}
+				StripDetailBO stripDetail = new StripDetailBO(true);
+				stripDetail.setStripId(currentStrip + 1l);
+				stripDetail.setTestType(TestTypeEnum.CONTROL);
+				stripDetail.setParameterId(stripParameterDetailBO.getParameterId());
+				stripDetail.setPatientId(controlIdTxt.getText());
+				StripDetailHelper.addStrip(stripDetail);
+				TrayWindowView.getInstance().designWindow();
+				MainWindow.frame.validate();
 			}
 		});
 		return selectedStripDetail;
