@@ -1,34 +1,165 @@
-/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_KRl88A6-Eea9NcV0qJOzCA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="PatientDetails.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PatientDetails.java&quot; partName=&quot;PatientDetails.java&quot; title=&quot;PatientDetails.java&quot; tooltip=&quot;SSReaderDAO/src/org/ssr/dao/patientdetails/PatientDetails.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SSReaderDAO/src/org/ssr/dao/patientdetails/PatientDetails.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;14&quot; selectionOffset=&quot;326&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_KRl88Q6-Eea9NcV0qJOzCA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="CommonQueries.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;CommonQueries.java&quot; partName=&quot;CommonQueries.java&quot; title=&quot;CommonQueries.java&quot; tooltip=&quot;SSReaderDAO/src/org/ssr/dao/CommonQueries.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SSReaderDAO/src/org/ssr/dao/CommonQueries.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;13&quot; selectionOffset=&quot;1193&quot; selectionTopPixel=&quot;315&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_KRl88g6-Eea9NcV0qJOzCA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ParameterDetailHelper.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ParameterDetailHelper.java&quot; partName=&quot;ParameterDetailHelper.java&quot; title=&quot;ParameterDetailHelper.java&quot; tooltip=&quot;SSReader/src/org/ssr/converthelper/ParameterDetailHelper.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SSReader/src/org/ssr/converthelper/ParameterDetailHelper.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;4867&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_KRl88w6-Eea9NcV0qJOzCA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ParameterDetailsCLIA.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;ParameterDetailsCLIA.java&quot; partName=&quot;ParameterDetailsCLIA.java&quot; title=&quot;ParameterDetailsCLIA.java&quot; tooltip=&quot;SSReaderDAO/src/org/ssr/dao/parameterdetails/ParameterDetailsCLIA.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SSReaderDAO/src/org/ssr/dao/parameterdetails/ParameterDetailsCLIA.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;618&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_KRl89A6-Eea9NcV0qJOzCA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="IResultDetail.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;IResultDetail.java&quot; partName=&quot;IResultDetail.java&quot; title=&quot;IResultDetail.java&quot; tooltip=&quot;SSReaderDAO/src/org/ssr/dao/resultsdetails/IResultDetail.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/SSReaderDAO/src/org/ssr/dao/resultsdetails/IResultDetail.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;13&quot; selectionOffset=&quot;82&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnH
+<?xml version="1.0"?>
+<dbdetails>
+	<tabledetail id="1001">
+		<tablename>patient_details</tablename>
+		<createquery>CREATE TABLE patient_details (
+  patient_id bigint(20) NOT NULL AUTO_INCREMENT,
+  first_name varchar(45) DEFAULT NULL,
+  last_name varchar(45) DEFAULT NULL,
+  age int(11) DEFAULT NULL,
+  gender varchar(8) DEFAULT NULL,
+  phone_no decimal(14,0) DEFAULT NULL,
+  mail_id varchar(60) DEFAULT NULL,
+  is_deleted int DEFAULT 0,
+  creation_date timestamp,
+  last_modified_date timestamp,
+  PRIMARY KEY (patient_id)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=latin1;</createquery>
+	</tabledetail>
+	<tabledetail id="1002">
+		<tablename>parameter_details_CLIA</tablename>
+		<createquery>CREATE TABLE parameter_details_CLIA (
+  parameter_id int(11) NOT NULL AUTO_INCREMENT,
+  parameter_name varchar(45) DEFAULT NULL,
+  parameter_unit varchar(45) DEFAULT NULL,
+  no_of_std int(11) DEFAULT NULL,
+  formula varchar(45) DEFAULT NULL,
+  is_calibrate int(1) DEFAULT '0',
+  is_active int(1) DEFAULT 1,
+  filterwheel int(11) DEFAULT 0,
+  creation_date timestamp,
+  last_modified_date timestamp,
+  PRIMARY KEY (parameter_id)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=latin1;</createquery>
+	</tabledetail>
+	<tabledetail id="1003">
+		<tablename>parameter_details_ELISA</tablename>
+		<createquery>CREATE TABLE parameter_details_ELISA (
+  parameter_id int(11) NOT NULL AUTO_INCREMENT,
+  parameter_name varchar(45) DEFAULT NULL,
+  parameter_unit varchar(45) DEFAULT NULL,
+  no_of_std int(11) DEFAULT NULL,
+  formula varchar(45) DEFAULT NULL,
+  is_calibrate int(1) DEFAULT '0',
+  is_active int(1) DEFAULT 1,
+  filterwheel int(11) DEFAULT 0,
+  creation_date timestamp,
+  last_modified_date timestamp,
+  PRIMARY KEY (parameter_id)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=latin1;</createquery>
+	</tabledetail>
+	<tabledetail id="1004">
+		<tablename>standard_details_CLIA</tablename>
+		<createquery>CREATE TABLE standard_details_CLIA (
+  parameter_id int(11) NOT NULL,
+  std_id int(11) NOT NULL,
+  std_value decimal(12,4) NOT NULL,
+  rlu_value decimal(12,4) NOT NULL DEFAULT '0.0000',
+  PRIMARY KEY (parameter_id,std_id),
+  KEY parameter_id_idx (parameter_id),
+  CONSTRAINT parameter_id_CLIA FOREIGN KEY (parameter_id) REFERENCES parameter_details_CLIA (parameter_id) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;</createquery>
+	</tabledetail>
+	<tabledetail id="1005">
+		<tablename>standard_details_ELISA</tablename>
+		<createquery>CREATE TABLE  standard_details_ELISA (
+  parameter_id int(11) NOT NULL,
+  std_id int(11) NOT NULL,
+  std_value decimal(12,4) NOT NULL,
+  rlu_value decimal(12,4) NOT NULL DEFAULT '0.0000',
+  PRIMARY KEY (parameter_id,std_id),
+  KEY parameter_id_idx (parameter_id),
+  CONSTRAINT parameter_id FOREIGN KEY (parameter_id) REFERENCES parameter_details_ELISA (parameter_id) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;</createquery>
+	</tabledetail>
+	<tabledetail id="1006">
+		<tablename>qcmaterial_CLIA</tablename>
+		<createquery>CREATE TABLE  qcmaterial_CLIA (
+  qc_id bigint(20) NOT NULL AUTO_INCREMENT,
+  barcode varchar(15) DEFAULT NULL,
+  parameter_id int(11) NOT NULL,
+  analyte varchar(10) DEFAULT NULL,
+  qclot bigint(20) DEFAULT NULL,
+  reference decimal(10,2) DEFAULT NULL,
+  refPlusOrMinus decimal(10,2) DEFAULT NULL,
+  is_deleted int DEFAULT 0,
+  creation_date timestamp,
+  last_modified_date timestamp,
+  PRIMARY KEY (qc_id)
+) AUTO_INCREMENT=1000 ENGINE=InnoDB DEFAULT CHARSET=latin1;</createquery>
+	</tabledetail>
+	<tabledetail id="1007">
+		<tablename>qcmaterial_ELISA</tablename>
+		<createquery>CREATE TABLE  qcmaterial_ELISA (
+  qc_id bigint(20) NOT NULL AUTO_INCREMENT,
+  barcode varchar(15) DEFAULT NULL,
+  parameter_id int(11) NOT NULL,
+  analyte varchar(10) DEFAULT NULL,
+  qclot bigint(20) DEFAULT NULL,
+  reference decimal(10,2) DEFAULT NULL,
+  refPlusOrMinus decimal(10,2) DEFAULT NULL,
+  is_deleted int DEFAULT 0,
+  creation_date timestamp,
+  last_modified_date timestamp,
+  PRIMARY KEY (qc_id)
+) AUTO_INCREMENT=1000 ENGINE=InnoDB DEFAULT CHARSET=latin1;</createquery>
+	</tabledetail>
+	<tabledetail id="1008">
+		<tablename>strip_detail_CLIA</tablename>
+		<createquery>CREATE TABLE strip_detail_CLIA (
+  strip_id int(11) NOT NULL DEFAULT '0',
+  test_type int(11) DEFAULT NULL,
+  parameter_id bigint(20) DEFAULT NULL,
+  patient_id varchar(45) DEFAULT NULL,
+  control_id bigint(20) DEFAULT NULL,
+  calibration_type int(11) DEFAULT NULL,
+  status int(11) DEFAULT NULL,
+  result_id int(11) DEFAULT NULL,
+  rlu_value decimal(12,4),
+  PRIMARY KEY (strip_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;</createquery>
+	</tabledetail>
+	<tabledetail id="1009">
+		<tablename>strip_detail_ELISA</tablename>
+		<createquery>CREATE TABLE strip_detail_ELISA (
+  strip_id int(11) NOT NULL DEFAULT '0',
+  test_type int(11) DEFAULT NULL,
+  parameter_id bigint(20) DEFAULT NULL,
+  patient_id varchar(45) DEFAULT NULL,
+  control_id bigint(20) DEFAULT NULL,
+  calibration_type int(11) DEFAULT NULL,
+  status int(11) DEFAULT NULL,
+  result_id int(11) DEFAULT NULL,
+  rlu_value decimal(12,4),
+  PRIMARY KEY (strip_id)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;</createquery>
+	</tabledetail>
+	<tabledetail id="1010">
+		<tablename>result_detail_CLIA</tablename>
+		<createquery>CREATE TABLE  result_detail_CLIA (
+  result_id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  parameter_id int(10) unsigned NOT NULL DEFAULT '0',
+  patient_id varchar(45) NOT NULL DEFAULT '',
+  rlu_value decimal(12,4) NOT NULL DEFAULT '0.0000',
+  conc decimal(12,4) NOT NULL DEFAULT '0.0000',
+  sample_type int(1),
+  creation_date timestamp,
+  last_modified_date timestamp,
+  PRIMARY KEY (result_id)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=latin1;</createquery>
+	</tabledetail>
+	<tabledetail id="1010">
+		<tablename>result_detail_ELISA</tablename>
+		<createquery>CREATE TABLE  result_detail_ELISA (
+  result_id int(10) unsigned NOT NULL AUTO_INCREMENT,
+  parameter_id int(10) unsigned NOT NULL DEFAULT '0',
+  patient_id varchar(45) NOT NULL DEFAULT '',
+  rlu_value decimal(12,4) NOT NULL DEFAULT '0.0000',
+  conc decimal(12,4) NOT NULL DEFAULT '0.0000',
+  sample_type int(1),
+  creation_date timestamp,
+  last_modified_date timestamp,
+  PRIMARY KEY (result_id)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=latin1;</createquery>
+	</tabledetail>
+</dbdetails>
