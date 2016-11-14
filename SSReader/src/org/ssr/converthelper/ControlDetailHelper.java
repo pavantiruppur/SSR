@@ -53,7 +53,7 @@ public class ControlDetailHelper {
 		controlDetail.setAnalyte(controlDetailBO.getAnalyte());
 		controlDetail.setBarcode(controlDetailBO.getBarcode());
 		controlDetail.setParameterId(controlDetailBO.getParameterId());
-		controlDetail.setQcId(Long.valueOf(controlDetailBO.getQcId()));
+		controlDetail.setQcId(controlDetailBO.getQcId());
 		controlDetail.setQclot(controlDetailBO.getQcLot());
 		controlDetail.setReference(controlDetailBO.getReference());
 		controlDetail.setRefPlusOrMinus(controlDetailBO.getRefPlusOrMinus());

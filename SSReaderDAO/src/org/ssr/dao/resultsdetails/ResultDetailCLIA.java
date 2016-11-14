@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "result_detail_ELISA")
+@Table(name = "result_detail_CLIA")
 public class ResultDetailCLIA implements IResultDetail, Serializable {
 
 	private static final long serialVersionUID = 1L;

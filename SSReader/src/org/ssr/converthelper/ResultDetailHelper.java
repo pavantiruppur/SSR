@@ -70,8 +70,8 @@ public class ResultDetailHelper {
 		return resultDetailBO;
 	}
 	
-	public static List<ResultDetailBO> getAllResultDetailsForWhere(String whereCond){
-		List<IResultDetail> resultDetail = commonQueries.getAllDetails("from "+ ReaderComponents.getTableNameForMode(IResultDetail.class).getSimpleName()+ " " + whereCond);
+	public static List<ResultDetailBO> getAllResultDetailsForPatientID(String patientId, TestTypeEnum type){
+		List<IResultDetail> resultDetail = commonQueries.getAllDetails("from "+ ReaderComponents.getTableNameForMode(IResultDetail.class).getSimpleName()+ " where patientId = '" + patientId +"' and sample_type = "+ type.getKey());
 		List<ResultDetailBO> resultDetailBO = getResultDetails(resultDetail);
 		return resultDetailBO;
 	}

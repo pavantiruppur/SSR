@@ -244,7 +244,7 @@ public class ControlDetailModule implements IDataDetailPopulate {
 
 		DefaultKeyedValues data = new DefaultKeyedValues();
 		try {
-			List<ResultDetailBO> resultDetails = ResultDetailHelper.getAllResultDetailsForWhere(" where patient_id = '"+ qcBO.getQcId() +"-"+ qcBO.getBarcode() +"' and samply_type = "+ TestTypeEnum.CONTROL.getKey());
+			List<ResultDetailBO> resultDetails = ResultDetailHelper.getAllResultDetailsForPatientID(qcBO.getQcId() +"-"+ qcBO.getBarcode() ,TestTypeEnum.CONTROL);
 			Object[][] resultPlots = new Object[2][resultDetails.size()];
 			int index = 0;
 			Double val = 0.0;

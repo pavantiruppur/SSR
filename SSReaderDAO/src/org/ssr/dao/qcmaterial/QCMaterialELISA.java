@@ -10,7 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "qcmaterial_CLIA")
+@Table(name = "qcmaterial_ELISA")
 public class QCMaterialELISA implements IQCMaterial, Serializable {
 
 	private static final long serialVersionUID = 1L;
