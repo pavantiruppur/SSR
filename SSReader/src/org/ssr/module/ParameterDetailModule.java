@@ -37,6 +37,8 @@ import org.ssr.components.ReaderComponents;
 import org.ssr.converthelper.ParameterDetailHelper;
 import org.ssr.converthelper.StandardDetailHelper;
 import org.ssr.enums.FilterWheelEnum;
+import org.ssr.enums.FormulaEnum;
+import org.ssr.formula.FormulaBase;
 import org.ssr.view.MainWindow;
 
 public class ParameterDetailModule implements IDataDetailPopulate {
@@ -45,15 +47,17 @@ public class ParameterDetailModule implements IDataDetailPopulate {
 	private static final int TEXTFIELD_WIDTH = 180;
 	public static final int LABEL_WIDTH = 100;
 	
-	JTextField patIdTxt = null, patFirstNameTxt = null, patLastNameTxt = null,  patAgeTxt = null;
+	JTextField patIdTxt = null, patFirstNameTxt = null, patLastNameTxt = null;
 	JComboBox patSexCmbo = null, filterWheelCmbo = null;
+	JComboBox<FormulaEnum> formulaCmbo = null;
 	JButton addPatientbt = null, clearBt = null;
 	JPanel patientDetailPanel = null;
-	JPanel noStdPanel = null;
+	JPanel noStdPanel = null, formulaSectionPanel = null;
 	ArrayList<JTextField> noStdList = null;
 	public JTable resultDetailTable = null;
 	JScrollPane resultScrollPane = null;
 	List<ParameterDetailsBO> parameterDetailList = null;
+	FormulaEnum formulaEnum = null;
 
 	static ParameterDetailModule instance = null;
 	
@@ -177,7 +181,26 @@ public class ParameterDetailModule implements IDataDetailPopulate {
 		} 
 
 		ReaderComponents.getLabel("Formula",patientDetailPanel,LABEL_WIDTH + 20);
-		patAgeTxt = ReaderComponents.getTextField(patientDetailPanel,TEXTFIELD_WIDTH*50/100);
+		
+		FormulaEnum formulas[] = FormulaEnum.values();
+		formulaCmbo = ReaderComponents.getComboBox(formulas ,patientDetailPanel, TEXTFIELD_WIDTH);
+		formulaCmbo.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				formulaEnum = (FormulaEnum) formulaCmbo.getSelectedItem();
+				FormulaBase formula = formulaEnum.getFormula();
+				if(formulaSectionPanel != null){
+					patientDetailPanel.remove(formulaSectionPanel);
+				}
+				formulaSectionPanel = formula.getJPanel();
+				patientDetailPanel.add(formulaSectionPanel, patientDetailPanel.getComponentCount() - 1);
+				MainWindow.frame.repaint();
+			}
+		});
+		formulaEnum = (FormulaEnum)formulaCmbo.getSelectedItem();
+		formulaSectionPanel = formulaEnum.getFormula().getJPanel();
+		patientDetailPanel.add(formulaSectionPanel);
 		
 		JPanel buttonPanel = ReaderComponents.getContentPanel();
 		buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER,30,3));
@@ -322,12 +345,6 @@ public class ParameterDetailModule implements IDataDetailPopulate {
 		}
 		patLastNameTxt.setBorder(BorderFactory.createLineBorder(Color.GRAY));
 		
-		if(patAgeTxt.getText() == null || patAgeTxt.getText().isEmpty()){
-			patAgeTxt.setBorder(BorderFactory.createLineBorder(Color.RED));
-			JOptionPane.showMessageDialog(null, "Enter Patient Age in Number");
-			return false;
-		}
-		patAgeTxt.setBorder(BorderFactory.createLineBorder(Color.GRAY));
 		return true;
 	}
 	
@@ -335,13 +352,12 @@ public class ParameterDetailModule implements IDataDetailPopulate {
 		patIdTxt.setText("");
 		patFirstNameTxt.setText("");
 		patLastNameTxt.setText("");
-		patAgeTxt.setText("");
+		formulaCmbo.setSelectedIndex(0);
 		patSexCmbo.setSelectedIndex(0);
 		
 		patIdTxt.setBorder(BorderFactory.createLineBorder(Color.GRAY));
 		patFirstNameTxt.setBorder(BorderFactory.createLineBorder(Color.GRAY));
 		patLastNameTxt.setBorder(BorderFactory.createLineBorder(Color.GRAY));
-		patAgeTxt.setBorder(BorderFactory.createLineBorder(Color.GRAY));
 	}
 	
 	public void insertPatientDetails(){
@@ -350,7 +366,8 @@ public class ParameterDetailModule implements IDataDetailPopulate {
 		parameterDetail.setNoOfStd(Integer.parseInt(patSexCmbo.getSelectedItem().toString()));
 		parameterDetail.setParameterName(patFirstNameTxt.getText());
 		parameterDetail.setParameterUnit(patLastNameTxt.getText());
-		parameterDetail.setFormula(patAgeTxt.getText());
+		parameterDetail.setFormula(String.valueOf(formulaEnum.getText()));
+		parameterDetail.setFormulaEnum(formulaEnum);
 		if(MainWindow.mode.equals("ELISA")){
 			parameterDetail.setFilterWheel(FilterWheelEnum.getEnumByKey(filterWheelCmbo.getSelectedItem().toString()));
 		} 

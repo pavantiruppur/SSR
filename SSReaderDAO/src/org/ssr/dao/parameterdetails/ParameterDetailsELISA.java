@@ -41,6 +41,12 @@ public class ParameterDetailsELISA implements IParameterDetails, Serializable {
 	@Column(name="filterwheel")
 	private int filterWheel;
 
+	@Column(name="formula_id")
+	private int formulaId;
+
+	@Column(name="formula_json")
+	private String formulaJson;
+
 	@Column(name="creation_date")
 	private Date creationDate;
 
@@ -131,5 +137,21 @@ public class ParameterDetailsELISA implements IParameterDetails, Serializable {
 	@Override
 	public void setFilterWheel(int filterWheel) {
 		this.filterWheel = filterWheel;
+	}
+
+	public int getFormulaId() {
+		return formulaId;
+	}
+
+	public void setFormulaId(int formulaId) {
+		this.formulaId = formulaId;
+	}
+
+	public String getFormulaJson() {
+		return formulaJson;
+	}
+
+	public void setFormulaJson(String formulaJson) {
+		this.formulaJson = formulaJson;
 	}
 }

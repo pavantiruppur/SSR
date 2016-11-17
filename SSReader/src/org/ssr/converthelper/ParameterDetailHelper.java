@@ -16,6 +16,7 @@ import org.ssr.dao.standarddetails.IStandardDetails;
 import org.ssr.dao.stripdetails.IStripDetail;
 import org.ssr.enums.ActiveCheckEnum;
 import org.ssr.enums.FilterWheelEnum;
+import org.ssr.enums.FormulaEnum;
 import org.ssr.view.MainWindow;
 
 public class ParameterDetailHelper {
@@ -53,6 +54,8 @@ public class ParameterDetailHelper {
 		ParameterDetailsBO parameterDetailBO = new ParameterDetailsBO();
 		parameterDetailBO.setCalibrated(ActiveCheckEnum.getEnumByKey(parameterDetail.getIsCalibrate()).getValue());
 		parameterDetailBO.setFormula(parameterDetail.getFormula());
+		parameterDetailBO.setFormulaEnum(FormulaEnum.getEnumByKey(parameterDetail.getFormulaId()));
+		parameterDetailBO.setFormulaJson(parameterDetail.getFormulaJson());
 		parameterDetailBO.setNoOfStd(parameterDetail.getNoOfStd());
 		parameterDetailBO.setParameterId(parameterDetail.getParameterId());
 		parameterDetailBO.setParameterName(parameterDetail.getParameterName());
@@ -77,6 +80,8 @@ public class ParameterDetailHelper {
 		}
 		
 		parameterDetail.setFormula(parameterDetailBO.getFormula());
+		parameterDetail.setFormulaId(parameterDetailBO.getFormulaEnum().getId());
+		parameterDetail.setFormulaJson(parameterDetailBO.getFormulaEnum().getFormula().getJSON());
 		parameterDetail.setIsCalibrate(ActiveCheckEnum.getEnumByValue(parameterDetailBO.isCalibrated()).getKey());
 		parameterDetail.setNoOfStd(parameterDetailBO.getNoOfStd());
 		parameterDetail.setParameterId(parameterDetailBO.getParameterId());

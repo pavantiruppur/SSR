@@ -8,5 +8,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/SSReaderDAO"/>
 	<classpathentry kind="lib" path="E:/lib/jfreechart-1.0.14/jfreechart-1.0.14/lib/jcommon-1.0.17.jar"/>
+	<classpathentry kind="lib" path="lib/gson-2.2.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

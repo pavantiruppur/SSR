@@ -21,6 +21,8 @@ import org.ssr.enums.CalibrationTypeEnum;
 import org.ssr.enums.ErrorMessageEnum;
 import org.ssr.enums.StripStatusEnum;
 import org.ssr.enums.TestTypeEnum;
+import org.ssr.formula.FormulaBase;
+import org.ssr.formula.FormulaSectionBase;
 import org.ssr.view.CalibrationModalView;
 import org.ssr.view.MainWindow;
 import org.ssr.view.TrayWindowView;
@@ -95,8 +97,16 @@ public class CommunicationModule {
 				minId = i + 1;
 			} 
 		}
+		FormulaBase formulaBase = stripDetail.getParameterDetail().getFormulaEnum().getFormula();
+		FormulaSectionBase sectionBase = formulaBase.getFormulaSectionByJSON(stripDetail.getParameterDetail().getFormulaJson());
+		if(sectionBase != null) {
+			rlu = sectionBase.getXVaule(rlu);
+		}
 		ResultDetailBO resultDetail = new ResultDetailBO();
 		Double conc = calculateConc(standardDetailList.get(minId), standardDetailList.get(maxId), rlu);
+		if(sectionBase != null) {
+			conc = sectionBase.getYValue(conc);
+		}
 		resultDetail.setConc(conc);
 //		concList.add(Double.parseDouble(dc_conc.format(conc)));
 		resultDetail.setParameterId(stripDetail.getParameterId());

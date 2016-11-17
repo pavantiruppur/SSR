@@ -27,6 +27,12 @@ public interface IParameterDetails {
 	
 	public int getFilterWheel();
 	public void setFilterWheel(int filterWheel);
+	
+	public int getFormulaId();
+	public void setFormulaId(int formulaId);
+	
+	public String getFormulaJson();
+	public void setFormulaJson(String formulaJson);
 
 	public Date getCreationDate();
 	public void setCreationDate(Date creationDate);

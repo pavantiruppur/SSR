@@ -178,8 +178,15 @@ public class ReaderComponents {
 		return passwordField;
 	}
 	
-	public static JComboBox getComboBox(String[] data,JComponent parent,int width){
+	/*public static JComboBox getComboBox(String[] data,JComponent parent,int width){
 		JComboBox comboBox = new JComboBox(data);
+		parent.add(comboBox);
+		comboBox.setPreferredSize(new Dimension(width, 25));
+		return comboBox;
+	}*/
+	
+	public static <T> JComboBox<T> getComboBox(T[] data,JComponent parent,int width){
+		JComboBox<T> comboBox = new JComboBox<T>(data);
 		parent.add(comboBox);
 		comboBox.setPreferredSize(new Dimension(width, 25));
 		return comboBox;

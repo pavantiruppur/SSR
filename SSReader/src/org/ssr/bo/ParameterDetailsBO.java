@@ -3,6 +3,7 @@ package org.ssr.bo;
 import java.util.List;
 
 import org.ssr.enums.FilterWheelEnum;
+import org.ssr.enums.FormulaEnum;
 
 public class ParameterDetailsBO {
 	Long parameterId;
@@ -10,6 +11,8 @@ public class ParameterDetailsBO {
 	String parameterUnit;
 	int noOfStd;
 	String formula;
+	FormulaEnum formulaEnum;
+	String formulaJson;
 	FilterWheelEnum filterWheel;
 	List<StandardDetailsBO> stdDetailList;
 	boolean isCalibrated;
@@ -61,5 +64,17 @@ public class ParameterDetailsBO {
 	}
 	public void setCalibrated(boolean isCalibrated) {
 		this.isCalibrated = isCalibrated;
+	}
+	public FormulaEnum getFormulaEnum() {
+		return formulaEnum;
+	}
+	public void setFormulaEnum(FormulaEnum formulaEnum) {
+		this.formulaEnum = formulaEnum;
+	}
+	public String getFormulaJson() {
+		return formulaJson;
+	}
+	public void setFormulaJson(String formulaJson) {
+		this.formulaJson = formulaJson;
 	}
 }
